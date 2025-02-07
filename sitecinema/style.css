@@ -5,17 +5,32 @@
     box-sizing: border-box;
 }
 
+/* Définition des couleurs */
+:root {
+    --primary-color: #2c3e50;
+    --text-color: #333;
+    --accent-color: #e74c3c;
+    --background-color: #ffffff;
+}
+
 /* Corps de la page */
+html, body {
+    height: 100%; /* Prendre toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column; /* Positionner les éléments en colonne */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: 20px;
+    flex: 1; /* Prendre toute la hauteur disponible */
 }
 
 /* En-tête */
 header {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px;
     text-align: center;
@@ -41,13 +56,14 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: var(--accent-color);
 }
 
 /* Section principale */
 section {
     margin-top: 20px;
     padding: 15px;
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 8px;
 }
 
@@ -57,4 +73,23 @@ section {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Place le footer en bas de la page */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
 }
